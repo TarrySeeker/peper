@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-// Replace with your actual GitHub repository name, e.g. "paper-fairies"
 const repoName = process.env.REPO_NAME || "";
 
 const nextConfig: NextConfig = {
@@ -9,7 +8,8 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: isProd && repoName ? `/${repoName}` : "",
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./lib/image-loader.ts",
     remotePatterns: [
       {
         protocol: "https",

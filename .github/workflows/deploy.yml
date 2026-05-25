@@ -28,6 +28,7 @@ jobs:
         env:
           NODE_ENV: production
           REPO_NAME: ${{ github.event.repository.name }}
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
 
       - name: Add .nojekyll
         run: touch out/.nojekyll
