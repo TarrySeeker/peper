@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #fffdfb;
+    --color-bg-soft: #fbf4f1;
+    --color-rose: #f4d6d8;
+    --color-rose-deep: #d88891;
+    --color-ink: #3a2b2e;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #f4d6d8;
+    color: #3a2b2e;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fbf4f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f4d6d8;
+    border-radius: 999px;
+    border: 2px solid #fbf4f1;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #efc1c5;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-12;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-rose-600 px-7 py-4 text-sm uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-rose-700 hover:shadow-petal active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-rose-300 bg-white/60 px-7 py-3.5 text-sm uppercase tracking-[0.2em] text-rose-700 backdrop-blur transition-all duration-300 hover:border-rose-500 hover:bg-white;
+  }
+
+  .heading-display {
+    @apply font-display font-light leading-[1.05] tracking-tight text-ink-900;
+  }
+
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-[0.32em] text-rose-600;
+  }
+
+  .product-card {
+    @apply relative flex flex-col overflow-hidden bg-white/70 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-petal;
+  }
+
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      #d88891 0%,
+      #d4a574 25%,
+      #d88891 50%,
+      #d4a574 75%,
+      #d88891 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .marquee-track {
+    animation-name: marquee-ltr;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
+
+  @keyframes marquee-ltr {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+@layer utilities {
+  .noise {
+    position: relative;
+  }
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>");
+  }
+}
