@@ -6,7 +6,7 @@ import { categories } from "@/lib/products";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 bg-rose-700 text-rose-50">
+    <footer className="bg-rose-700 text-rose-50">
       <div className="container-site grid gap-12 py-20 lg:grid-cols-[1.2fr_1fr_1fr_1.3fr]">
         <div>
           <div className="font-display text-3xl tracking-[0.16em]">

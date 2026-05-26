@@ -6,11 +6,11 @@ export default function Hero() {
     <>
       <section
         aria-label="Главное"
-        className="h-screen w-full"
+        className="w-full"
       >
-        <div className="flex h-full flex-col md:flex-row">
+        <div className="flex min-h-screen flex-col md:flex-row">
           {/* LEFT — фото */}
-          <div className="relative h-1/2 w-full md:h-full md:w-1/2">
+          <div className="relative min-h-[45vh] w-full md:min-h-0 md:flex-1">
             <Image
               src="/hero/hero-split.png"
               alt="PAPER.FAIRIES — бутик нежности"
@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT — editorial-текст */}
-          <div className="flex h-1/2 w-full items-center justify-center bg-rose-100 px-8 py-8 md:py-12 md:h-full md:w-1/2 md:px-12 lg:px-16">
+          <div className="flex w-full items-center justify-center bg-rose-100 px-8 py-14 md:flex-1 md:px-12 lg:px-16">
             <div className="max-w-md text-center">
               {/* Eyebrow */}
               <p className="font-sans text-[11px] uppercase tracking-[0.35em] text-gold-600">

@@ -150,41 +150,6 @@ export default function About() {
           </motion.p>
         </div>
 
-        {/* ── Accent banner — Итальянские ткани, premium качество, от 700 ₽/м ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mt-16 mb-14 max-w-4xl"
-        >
-          <div className="flex flex-col gap-4 border-y border-gold-400/40 py-10 sm:py-12 md:flex-row md:items-end md:justify-between md:gap-10">
-            {/* Левый блок — заголовок (микс шрифтов) */}
-            <div className="flex-1">
-              <p className="font-sans text-[11px] uppercase tracking-[0.35em] text-gold-600">
-                Atelier
-              </p>
-              <h3 className="mt-3 font-heavy text-3xl leading-[1.05] tracking-tight text-ink-900 sm:text-4xl md:text-5xl">
-                Итальянские ткани
-                <span className="block font-script italic font-light text-rose-700">
-                  premium качество
-                </span>
-              </h3>
-            </div>
-
-            {/* Правый блок — цена-акцент */}
-            <div className="md:text-right md:shrink-0">
-              <p className="font-sans text-[10px] uppercase tracking-[0.32em] text-ink-500">
-                Стоимость материала
-              </p>
-              <p className="mt-2 font-display text-4xl leading-none text-rose-700 sm:text-5xl md:text-6xl">
-                от <span className="font-heavy font-bold">700</span>
-                <span className="ml-1 font-sans text-base align-top text-ink-700">₽/м</span>
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
         {/* ── Pull Quote 1 — above moodboard ── */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
