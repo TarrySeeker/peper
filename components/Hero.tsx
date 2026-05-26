@@ -8,9 +8,9 @@ export default function Hero() {
         aria-label="Главное"
         className="w-full"
       >
-        <div className="flex min-h-screen flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row md:h-[70vh]">
           {/* LEFT — фото */}
-          <div className="relative min-h-[45vh] w-full md:min-h-0 md:flex-1">
+          <div className="relative min-h-[40vh] w-full md:min-h-0 md:flex-1">
             <Image
               src="/hero/hero-split.png"
               alt="PAPER.FAIRIES — бутик нежности"
@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT — editorial-текст */}
-          <div className="flex w-full items-center justify-center bg-rose-100 px-8 py-14 md:flex-1 md:px-12 lg:px-16">
+          <div className="flex w-full items-center justify-center bg-rose-100 px-8 py-12 md:flex-1 md:px-12 lg:px-16">
             <div className="max-w-md text-center">
               {/* Eyebrow */}
               <p className="font-sans text-[11px] uppercase tracking-[0.35em] text-gold-600">
@@ -30,7 +30,7 @@ export default function Hero() {
               </p>
 
               {/* Main H2 */}
-              <h2 className="mt-6 font-passions font-normal text-4xl leading-[0.85] tracking-normal text-ink-900 sm:text-5xl md:text-7xl lg:text-[7rem] xl:text-[9rem]">
+              <h2 className="mt-4 font-passions font-normal text-4xl leading-[0.85] tracking-normal text-ink-900 sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
                 Маленькие детали{" "}
                 <span className="text-rose-700">
                   создают
